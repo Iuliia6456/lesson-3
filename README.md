@@ -8,16 +8,18 @@ Two Docker images are provided: a **fat image** (with many dev tools) and a **sl
 ## 📂 Repository Structure
 
 lesson-3/
-├── inference.py # Script for running inference on an image
-├── export_model.py # Script to export pretrained model to TorchScript
-├── model.pt # Exported TorchScript model
-├── Dockerfile.fat # Full-size Docker image
-├── Dockerfile.slim # Optimized multi-stage slim image
-├── install_dev_tools.sh # Environment setup script
-├── REPORT.md # Comparison report of fat vs slim images
-├── README.md # Instructions (this file)
-└── assets/ # Folder with test images (e.g. maltipoo.jpg)
+├── inference.py        # Script for running inference on an image
+├── export_model.py     # Script to export pretrained model to TorchScript
+├── model.pt            # Exported TorchScript model
+├── Dockerfile.fat      # Full-size Docker image
+├── Dockerfile.slim     # Optimized multi-stage slim image
+├── install_dev_tools.sh# Environment setup script
+├── REPORT.md           # Comparison report of fat vs slim images
+├── README.md           # Instructions (this file)
+└── assets/             # Folder with test images (e.g. maltipoo.jpg)
 
+
+🐳 Build Images
 From the repo root, run:
 
 ```bash
