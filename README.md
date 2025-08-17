@@ -1,11 +1,12 @@
 # Lesson 3 – ML Inference with Docker
 
 This project demonstrates exporting a pretrained MobileNetV2 model to TorchScript and running inference inside Docker containers.  
-Two Docker images are provided: a **fat image** (with many dev tools) and a **slim image** (optimized multi-stage build).  
+Two Docker images are provided: a **fat image** (with many dev tools) and a **slim image** (optimized multi-stage build).
 
 ---
 
 ## 📂 Repository Structure
+
 
 lesson-3/
 ├── inference.py        # Script for running inference on an image
@@ -19,12 +20,16 @@ lesson-3/
 └── assets/             # Folder with test images (e.g. maltipoo.jpg)
 
 
-🐳 Build Images
+---
+
+## 🛠️ Build Images
+
 From the repo root, run:
 
 ```bash
 docker build -t mobilenet-fat -f Dockerfile.fat .
 docker build -t mobilenet-slim -f Dockerfile.slim .
+
 
 🖼️ Run Inference
 
