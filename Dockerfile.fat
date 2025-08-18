@@ -1,0 +1,23 @@
+FROM python:3.10
+
+LABEL org.opencontainers.image.source="demo-fat" \
+      org.opencontainers.image.description="Fat MobileNetV2 CPU inference"
+
+WORKDIR /app
+
+# Add dev tools (intentionally big)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git curl wget ca-certificates build-essential vim && \
+    rm -rf /var/lib/apt/lists/*
+
+# Python deps (CPU wheels)
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir pillow \
+      --extra-index-url https://download.pytorch.org/whl/cpu \
+      torch torchvision
+
+# App
+COPY inference.py /app/inference.py
+COPY model.pt /app/model.pt
+
+ENTRYPOINT ["python", "/app/inference.py"]
