@@ -61,16 +61,15 @@ Both images produce identical inference results.
 
 ## Suggestions for Further Optimization
 
-- **Pin versions** of torch/torchvision for reproducibility.  
-- Remove cache files and `__pycache__` from the final layer.  
-- Consider model quantization or ONNX Runtime to further reduce size and speed up inference.  
-- Wrap the inference script in a lightweight API server (FastAPI or Flask) for easier integration.  
-- Explore using `distroless` or `alpine` bases (if PyTorch wheel support allows).  
+- Pin versions of torch/torchvision for reproducibility.  
+- Remove cache files and `__pycache__` from the final layer.
+- Wrap the inference script in a lightweight API server (FastAPI or Flask) for easier integration.   
 
 ---
 
 ## Conclusion
 We successfully created a PyTorch inference service with two Docker images.  
-The **fat image** is large but convenient for development, while the **slim image** is production-ready, cutting the size in half and removing unnecessary tools without sacrificing functionality.
+The **fat image** is large but convenient for development, while the **slim image** is production-ready, cutting the size in half and removing unnecessary tools without compromising functionality.
+
 
 
