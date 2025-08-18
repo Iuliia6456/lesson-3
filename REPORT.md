@@ -25,7 +25,8 @@
    - Takes an image input (`maltipoo.jpg`), preprocesses, and outputs top-3 predictions with probabilities.  
    - Example result (same for both images):  
      ```json
-     [{"rank": 1, "class_id": 153, "label": "Maltese dog", "prob": 0.44237685203552246},
+     [
+      {"rank": 1, "class_id": 153, "label": "Maltese dog", "prob": 0.44237685203552246},
       {"rank": 2, "class_id": 204, "label": "Lhasa", "prob": 0.029016569256782532},
       {"rank": 3, "class_id": 265, "label": "toy poodle", "prob": 0.020915253087878227}
      ]
@@ -71,4 +72,5 @@ Both images produce identical inference results.
 ## Conclusion
 We successfully created a PyTorch inference service with two Docker images.  
 The **fat image** is large but convenient for development, while the **slim image** is production-ready, cutting the size in half and removing unnecessary tools without sacrificing functionality.
+
 
