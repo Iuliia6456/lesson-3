@@ -22,6 +22,17 @@ lesson-3/
 
 ---
 
+## ⚙️ Environment Setup (optional)
+
+If you want to run the scripts locally (without Docker), first install the dependencies:
+
+```bash
+chmod +x install_dev_tools.sh
+./install_dev_tools.sh
+```
+
+---
+
 ## 🛠️ Build Images
 
 From the repo root, run:
